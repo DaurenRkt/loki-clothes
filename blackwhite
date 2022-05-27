@@ -1,0 +1,48 @@
+print("hi")
+import pandas
+import cv2
+import numpy as np
+import json
+import requests as r
+print("imported")
+
+
+## потом открытие файла(фото) через requests____
+#data = r.get('https://httpbin.org/image/png')
+
+#with open('test.png','wb') as file:
+#    file.write(data.content)
+#    file.close()
+##____________________________________________
+
+
+###Открытие картинки через cv2
+
+#def change_to_dots(img)
+
+img = cv2.imread("tolst.jpg")
+img = cv2.resize(img, (img.shape[1]//2, img.shape[0]//2))
+img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) #в серый цвет
+
+img = cv2.Canny(img,30,30 ) #сорс, порог1, порог2 (порог точность определения, чем меньше тем лучше детальность)
+
+img = cv2.flip(img, -1) #по горизонтали и тдтп
+#kernel = np.ones((5,5),np.uint8)
+#img = cv2.dilate(img,kernel, iterations = 1) #сорс, кернел, - (для обводки)
+
+#img = cv2.erode(img, kernel, iterations=1)
+
+#img2 = cv2.imread("tandir.jpg")
+
+
+img = cv2.resize(img, (img.shape[1]//2, img.shape[0]//2))
+img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) #в серый цвет
+
+
+cv2.imshow('result', img)
+#
+cv2.waitKey(0)
+
+
+#print("image imported")
+
