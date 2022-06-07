@@ -1,13 +1,10 @@
-print("hi")
 import pandas
 import cv2
 import numpy as np
 import json
-import requests as r
-print("imported")
+#import requests as r
 
-
-## потом открытие файла(фото) через requests____
+## opening photo by using requests
 #data = r.get('https://httpbin.org/image/png')
 
 #with open('test.png','wb') as file:
@@ -16,9 +13,7 @@ print("imported")
 ##____________________________________________
 
 
-###Открытие картинки через cv2
-
-#def change_to_dots(img)
+###opening file using cv2 library
 
 img = cv2.imread("tolst.jpg")
 img = cv2.resize(img, (img.shape[1]//2, img.shape[0]//2))
@@ -44,5 +39,5 @@ cv2.imshow('result', img)
 cv2.waitKey(0)
 
 
-#print("image imported")
+
 
